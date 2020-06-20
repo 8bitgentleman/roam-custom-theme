@@ -7,6 +7,7 @@ span.rm-page-ref[data-tag="Tweet"] {
     color: white !important;
     line-height: 2em;
     font-weight: 500;
+    border-radius: 4px;
 }
 
 span.rm-page-ref[data-tag="video"] {
@@ -14,6 +15,7 @@ span.rm-page-ref[data-tag="video"] {
     color: white !important;
     padding: 3px 7px;
     font-weight: 500;
+    border-radius: 4px;
     line-height: 2em;
 }
 span.rm-page-ref[data-tag="quote"] {
@@ -21,6 +23,7 @@ span.rm-page-ref[data-tag="quote"] {
     color: white !important;
     padding: 3px 7px;
     font-weight: 500;
+    border-radius: 4px;
     line-height: 2em;
 }
 span.rm-page-ref[data-tag="exercise"] {
@@ -28,6 +31,7 @@ span.rm-page-ref[data-tag="exercise"] {
     color: white !important;
     padding: 3px 7px;
     font-weight: 500;
+    border-radius: 4px;
     line-height: 2em;
 }
 span.rm-page-ref[data-tag="exercise"]:before {
@@ -42,6 +46,7 @@ span.rm-page-ref[data-tag="exercise"]:before {
     padding: 3px 8px;
     line-height: 2em;
     font-weight: 500;
+border-radius: 4px;
 }
 
 span.rm-page-ref[data-tag="Seedling"] {
@@ -84,6 +89,7 @@ span.rm-page-ref[data-tag="Essay"] {
     padding: 3px 7px;
     line-height: 2em;
     font-weight: 500;
+border-radius: 4px;
 }
 
 
@@ -100,6 +106,7 @@ span.rm-page-ref[data-tag="Talk"] {
     padding: 3px 7px;
     line-height: 2em;
     font-weight: 500;
+border-radius: 4px;
 }
 
 span.rm-page-ref[data-tag="Waiting"] {
@@ -108,6 +115,7 @@ span.rm-page-ref[data-tag="Waiting"] {
     padding: 3px 7px;
     line-height: 2em;
     font-weight: 500;
+border-radius: 4px;
 }
 
 span.rm-page-ref[data-tag="Researching"] {
@@ -116,6 +124,7 @@ span.rm-page-ref[data-tag="Researching"] {
     padding: 3px 7px;
     line-height: 2em;
     font-weight: 500;
+border-radius: 4px;
 }
 
 span.rm-page-ref[data-tag="Synthesising"] {
@@ -124,6 +133,7 @@ span.rm-page-ref[data-tag="Synthesising"] {
     padding: 3px 7px;
     line-height: 2em;
     font-weight: 500;
+border-radius: 4px;
 }
 
 
@@ -132,4 +142,5 @@ span.rm-page-ref[data-tag="Alive"] {
     color: #fff !important;
     padding: 3px 7px;
     line-height: 2em;
-    font-weight: 500; */
+    font-weight: 500;
+border-radius: 4px; */
