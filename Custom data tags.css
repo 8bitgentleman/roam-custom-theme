@@ -27,7 +27,7 @@ span.rm-page-ref[data-tag="quote"] {
     line-height: 2em;
 }
 span.rm-page-ref[data-tag="exercise"] {
-    background: #ADCB2A !important;
+    background: #4FC460 !important;
     color: white !important;
     padding: 3px 7px;
     font-weight: 500;
@@ -36,7 +36,7 @@ span.rm-page-ref[data-tag="exercise"] {
 }
 span.rm-page-ref[data-tag="exercise"]:before {
     content: '⚯ ';
-    background: #ADCB2A !important;
+    background: #4FC460 !important;
     color: white !important;
 
 }
