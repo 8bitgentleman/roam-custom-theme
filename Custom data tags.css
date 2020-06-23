@@ -40,7 +40,14 @@ span.rm-page-ref[data-tag="exercise"]:before {
     color: white !important;
 
 }
-/* span.rm-page-ref[data-tag="Evergreens"] {
+span.rm-page-ref[data-tag="religion"] {
+    color: #FF5047 !important;
+    padding: 3px 7px;
+    line-height: 2em;
+    font-weight: 500;
+	border-radius: 4px;
+}
+span.rm-page-ref[data-tag="Evergreens"] {
     background: #0DBAC6 !important;
     color: #fff !important;
     padding: 3px 8px;
@@ -143,4 +150,4 @@ span.rm-page-ref[data-tag="Alive"] {
     padding: 3px 7px;
     line-height: 2em;
     font-weight: 500;
-border-radius: 4px; */
+border-radius: 4px;
