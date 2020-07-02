@@ -5,10 +5,10 @@ Based on Maggie's "Leyendecker" theme
 
 span.rm-page-ref[data-tag="tweet"] {
     background: transparent;
-    color: #81D5ED;
+    color: #81D5ED !important;
     padding: 3px 7px;
     line-height: 2em;
-    font-weight: 500;
+    font-weight: 700 !important;
     border-radius: 4px;
 }
 span.rm-page-ref[data-tag="video"] {
@@ -53,8 +53,8 @@ span.rm-page-ref[data-tag="exercise"]:before {
 }
 
 span.rm-page-ref[data-tag="religion"] {
-  /* background: transparent !important; */
-  /* color: #FF5047 !important; */
+  background: transparent;
+  color: #FF5047 !important;
   padding: 3px 7px;
   line-height: 2em;
   font-weight: 700;
