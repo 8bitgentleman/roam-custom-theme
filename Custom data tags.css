@@ -2,51 +2,112 @@
 Custom data tags
 Based on Maggie's "Leyendecker" theme
 */
-span.rm-page-ref[data-tag="Tweet"] {
-    background: #81D5ED !important;
-    color: white !important;
+
+span.rm-page-ref[data-tag="tweet"] {
+    background: transparent;
+    color: #81D5ED;
+    padding: 3px 7px;
     line-height: 2em;
     font-weight: 500;
     border-radius: 4px;
+}
+span.rm-page-ref[data-tag="video"] {
+    background: #9769FF;
+    color: white;
+    padding: 3px 7px;
+    font-weight: 500;
+    border-radius: 4px;
+    line-height: 2em;
 }
 
-span.rm-page-ref[data-tag="video"] {
-    background: #9769FF !important;
-    color: white !important;
+span.rm-page-ref[data-tag="quotes"], span.rm-page-ref[data-tag="quote"] {
+    background: #233ED9;
+    color: white;
     padding: 3px 7px;
     font-weight: 500;
     border-radius: 4px;
     line-height: 2em;
 }
-span.rm-page-ref[data-tag="quote"] {
-    background: #233ED9 !important;
-    color: white !important;
-    padding: 3px 7px;
-    font-weight: 500;
-    border-radius: 4px;
-    line-height: 2em;
+
+span.rm-page-ref[data-tag="fav"] {
+    color: #F44336 ;
 }
+
+span.rm-page-ref[data-tag="fav"]:before {
+    content: '★ '
+}
+
 span.rm-page-ref[data-tag="exercise"] {
-    background: #4FC460 !important;
-    color: white !important;
+    background: #4FC460;
+    color: white;
     padding: 3px 7px;
-    font-weight: 500;
+    font-weight: 700;
     border-radius: 4px;
     line-height: 2em;
 }
 span.rm-page-ref[data-tag="exercise"]:before {
-    content: '⚯ ';
-    background: #4FC460 !important;
-    color: white !important;
+  content: '⚯ ';
+  background: #4FC460;
+  color: white;
 
 }
+
 span.rm-page-ref[data-tag="religion"] {
-    color: #FF5047 !important;
-    padding: 3px 7px;
-    line-height: 2em;
-    font-weight: 500;
-	border-radius: 4px;
+  background: transparent !important;
+  color: #FF5047;
+  padding: 3px 7px;
+  line-height: 2em;
+  font-weight: 700;
+  border-radius: 4px;
 }
+span.rm-page-ref[data-tag="newsletter"] {
+  background: #FC766F !important;
+  color: #fff !important;
+  padding: 3px 7px;
+  line-height: 2em;
+  font-weight: 700;
+  border-radius: 4px;
+}
+span.rm-page-ref[data-tag="Quick Capture"] {
+  background: transparent !important;
+  color: #4FC460 !important;
+
+}
+span.rm-page-ref[data-tag="Quick Capture"]:before {
+    content: '🖋 ';
+    color: transparent;
+    text-shadow: 0 0 0 #4FC460;
+
+}
+span.rm-page-ref[data-tag="idea bank"] {
+  background-color: transparent;
+  color: #FCB815 !important;
+  padding: 3px 4px;
+  font-weight: 700;
+  line-height: 1.4em;
+
+}
+span.rm-page-ref[data-tag="idea bank"]:before {
+   content: '✦ ';
+  /*-webkit-text-stroke: 1px black;*/
+}
+span.rm-page-ref[data-tag="campaign 1"]:before {
+   content: '⚑ ';
+   /*-webkit-text-stroke: 1px black;*/
+
+}
+span.rm-page-ref[data-tag="thoughts"]:before {
+    /* content: '🧠 ';*/
+    color: transparent !important;
+    text-shadow: 0 0 0 #37AC94;
+
+}
+
+/*               */
+/* Maggie's Tags */
+/*               */
+
+
 span.rm-page-ref[data-tag="Evergreens"] {
     background: #0DBAC6 !important;
     color: #fff !important;
@@ -62,19 +123,6 @@ span.rm-page-ref[data-tag="Seedling"] {
     font-weight: 600;
     line-height: 1.4em;
 }
-
-span.rm-page-ref[data-tag="Idea Bank"] {
-    color: #FCB815 !important;
-    padding: 3px 4px;
-    font-weight: 700;
-    line-height: 1.4em;
-}
-
-span.rm-page-ref[data-tag="Idea Bank"]:before {
-    content: '✦ '
-}
-
-
 
 span.rm-page-ref[data-tag="Garden Notes"] {
     color: #9DBC13;
