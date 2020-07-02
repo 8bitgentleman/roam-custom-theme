@@ -53,8 +53,8 @@ span.rm-page-ref[data-tag="exercise"]:before {
 }
 
 span.rm-page-ref[data-tag="religion"] {
-  background: transparent !important;
-  color: #FF5047 !important;
+  /* background: transparent !important; */
+  /* color: #FF5047 !important; */
   padding: 3px 7px;
   line-height: 2em;
   font-weight: 700;
