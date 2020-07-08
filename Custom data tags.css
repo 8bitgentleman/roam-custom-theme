@@ -12,7 +12,7 @@ span.rm-page-ref[data-tag="tweet"] {
     border-radius: 4px;
 }
 span.rm-page-ref[data-tag="video"] {
-    background: #9769FF;
+    background: #9769FF !important;
     color: white;
     padding: 3px 7px;
     font-weight: 500;
@@ -38,7 +38,7 @@ span.rm-page-ref[data-tag="fav"]:before {
 }
 
 span.rm-page-ref[data-tag="exercise"] {
-    background: #4FC460;
+    background: #4FC460 !important;
     color: white;
     padding: 3px 7px;
     font-weight: 700;
@@ -53,7 +53,7 @@ span.rm-page-ref[data-tag="exercise"]:before {
 }
 
 span.rm-page-ref[data-tag="religion"] {
-  background: transparent;
+  background: transparent !important;
   color: #FF5047 !important;
   padding: 3px 7px;
   line-height: 2em;
@@ -80,7 +80,7 @@ span.rm-page-ref[data-tag="Quick Capture"]:before {
 
 }
 span.rm-page-ref[data-tag="idea bank"] {
-  background-color: transparent;
+  background-color: transparent !important;
   color: #FCB815 !important;
   padding: 3px 4px;
   font-weight: 700;
@@ -103,6 +103,21 @@ span.rm-page-ref[data-tag="thoughts"]:before {
 
 }
 
+span.rm-page-ref[data-tag="recipes"] {
+    color: #FF5722 !important;
+    background-color: transparent !important;
+    padding: 3px 4px;
+    font-weight: 500;
+    line-height: 1.4em;
+    /* border: 2px solid #FF5722 !important; */
+
+}
+span.rm-page-ref[data-tag="recipes"]:before {
+    content: '🌶 ';
+    color: transparent;
+    text-shadow: 0 0 0 #FF5722 !important;
+    /* text-shadow: 0 0 0 rgb(var(--text-color), 1) !important; */
+}
 /*               */
 /* Maggie's Tags */
 /*               */
