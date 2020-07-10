@@ -121,6 +121,11 @@ span.rm-page-ref[data-tag="recipes"]:before {
 
 span.rm-page-ref[data-tag="personal"] {
     background-color: #616161 !important;
+    color:#F5F5F5 !important;
+  	padding: 3px 7px;
+    font-weight: 500;
+    border-radius: 4px;
+    line-height: 2em;
 }
 
 /*               */
