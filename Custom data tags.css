@@ -118,6 +118,11 @@ span.rm-page-ref[data-tag="recipes"]:before {
     text-shadow: 0 0 0 #FF5722 !important;
     /* text-shadow: 0 0 0 rgb(var(--text-color), 1) !important; */
 }
+
+span.rm-page-ref[data-tag="personal"] {
+    background-color: #616161 !important;
+}
+
 /*               */
 /* Maggie's Tags */
 /*               */
@@ -213,4 +218,5 @@ span.rm-page-ref[data-tag="Alive"] {
     padding: 3px 7px;
     line-height: 2em;
     font-weight: 500;
-border-radius: 4px;
+    border-radius: 4px;
+}
