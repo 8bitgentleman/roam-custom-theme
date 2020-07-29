@@ -130,6 +130,13 @@ span.rm-page-ref[data-tag="personal"] {
     line-height: 2em;
 }
 
+span.rm-page-ref[data-tag="awe"] {
+    color: rgb(var(--color-primary)) !important;
+    background-color: transparent !important;
+    padding: 3px 4px;
+    font-weight: 700;
+    line-height: 1.4em;
+}
 /*               */
 /* Maggie's Tags */
 /*               */
