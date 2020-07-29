@@ -21,7 +21,7 @@ span.rm-page-ref[data-tag="video"] {
 }
 
 span.rm-page-ref[data-tag="quotes"], span.rm-page-ref[data-tag="quote"] {
-    background: #233ED9;
+    background: #233ED9 !important;
     color: white !important;
     padding: 3px 7px;
     font-weight: 500;
@@ -30,10 +30,12 @@ span.rm-page-ref[data-tag="quotes"], span.rm-page-ref[data-tag="quote"] {
 }
 
 span.rm-page-ref[data-tag="fav"] {
-    color: #F44336 !important;
+  background: transparent !important;
+  color: #F44336 !important;
 }
 
 span.rm-page-ref[data-tag="fav"]:before {
+  background: transparent !important;
     content: '★ '
 }
 
