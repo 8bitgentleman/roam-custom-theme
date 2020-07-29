@@ -1390,12 +1390,34 @@ body > .bp3-portal .bp3-text-small {
 /* -----MY-MISC-STYLES----- */
 /* ------------------------ */
 
+
+
+
 /* OVERRIDE VERSION BULLET*/
 .version-bullet {
     color: white !important;
 }
 
 }
+
+/* -------------------------- */
+/*         MOBILE             */
+/* -------------------------- */
+
+
+/* get more page width on mobile */
+@media only screen and (max-width: 600px) {
+  :root {
+  --page-width: 600px;}
+
+  .roam-article {
+    padding-right: 0px !important;
+
+    padding-left: 0px !important;
+  }
+}
+
+
 /* OVERRIDE SAVING DOT */
 
 .rm-saving-icon .rm-synced {
@@ -1466,19 +1488,12 @@ code{
 h1.rm-title-display, .rm-title-textarea {
     margin-left: 0px;
 }
-/* -------------------------- */
-/*         MOBILE             */
-/* -------------------------- */
+/* lightly style external aliases */
+.rm-alias-external,
+.rm-alias-external:hover {
+  background-color: rgba(var(--color-secondary), .1) !important;
 
-
-/* get more page width on mobile */
-@media only screen and (max-width: 600px) {
-  :root {
-  --page-width: 600px;}
-
-  .roam-article {
-    padding-right: 0px !important;
-
-    padding-left: 0px !important;
-  }
+  padding: 3px 4px;
+  line-height: 1.4em;
+  border-radius: 4px;
 }
