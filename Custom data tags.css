@@ -13,7 +13,7 @@ span.rm-page-ref[data-tag="tweet"] {
 }
 span.rm-page-ref[data-tag="video"] {
     background: #9769FF !important;
-    color: white;
+    color: white !important;
     padding: 3px 7px;
     font-weight: 500;
     border-radius: 4px;
@@ -22,7 +22,7 @@ span.rm-page-ref[data-tag="video"] {
 
 span.rm-page-ref[data-tag="quotes"], span.rm-page-ref[data-tag="quote"] {
     background: #233ED9;
-    color: white;
+    color: white !important;
     padding: 3px 7px;
     font-weight: 500;
     border-radius: 4px;
@@ -30,7 +30,7 @@ span.rm-page-ref[data-tag="quotes"], span.rm-page-ref[data-tag="quote"] {
 }
 
 span.rm-page-ref[data-tag="fav"] {
-    color: #F44336 ;
+    color: #F44336 !important;
 }
 
 span.rm-page-ref[data-tag="fav"]:before {
@@ -39,7 +39,7 @@ span.rm-page-ref[data-tag="fav"]:before {
 
 span.rm-page-ref[data-tag="exercise"] {
     background: #4FC460 !important;
-    color: white;
+    color: white !important;
     padding: 3px 7px;
     font-weight: 700;
     border-radius: 4px;
@@ -157,7 +157,7 @@ span.rm-page-ref[data-tag="Garden Notes"] {
 }
 
 span.rm-page-ref[data-tag="Video Tutorial"] {
-    color: #db3b8d;
+    color: #db3b8d !important;
     padding: 3px 4px;
     line-height: 1.4em;
     font-weight: 700;
