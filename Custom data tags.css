@@ -137,6 +137,13 @@ span.rm-page-ref[data-tag="awe"] {
     font-weight: 700;
     line-height: 1.4em;
 }
+
+span.rm-page-ref[data-tag="conversations"]:before {
+    content: '💬 ';
+    color: transparent;
+    text-shadow: 0 0 0 var(--color-primary-contrast)  !important;
+}
+
 /*               */
 /* Maggie's Tags */
 /*               */
