@@ -144,26 +144,70 @@ span.rm-page-ref[data-tag="conversations"]:before {
     text-shadow: 0 0 0 var(--color-primary-contrast)  !important;
 }
 
+span.rm-page-ref[data-tag='seedlings'], span[data-link-title^='seedlings'] .rm-page-ref  {
+
+  color: #0DC670 !important;
+
+  padding: 3px 3px;
+
+  font-weight: 600;
+
+  line-height: 1.4em;
+
+}
+span.rm-page-ref[data-tag="seedlings"]:before {
+    content: '🌱 ';
+    /*color: transparent;
+    text-shadow: 0 0 0 #FF5722 !important;*/
+}
+
+span.rm-page-ref[data-tag='budding'], span[data-link-title^='budding'] .rm-page-ref  {
+
+  color: #0B9351 !important;
+
+  padding: 3px 3px;
+
+  font-weight: 600;
+
+  line-height: 1.4em;
+
+}
+span.rm-page-ref[data-tag="budding"]:before {
+    content: '🌿 ';
+    /*color: transparent;
+    text-shadow: 0 0 0 #FF5722 !important;*/
+}
+
+
+span.rm-page-ref[data-tag='evergreen'], span[data-link-title^='evergreen'] .rm-page-ref {
+
+  background: #0DC670 !important;
+
+  color: #fff !important;
+
+  padding: 3px 8px;
+
+  line-height: 2em;
+
+  font-weight: 500;
+
+}
+span.rm-page-ref[data-tag="evergreen"]:before {
+    content: '🌲 ';
+  text-shadow: 0 0 3px white;
+  position: relative;
+   /* color: transparent;
+    text-shadow: 0 0 0 #FF5722 !important;*/
+}
+
+
+
 /*               */
 /* Maggie's Tags */
 /*               */
 
 
-span.rm-page-ref[data-tag="Evergreens"] {
-    background: #0DBAC6 !important;
-    color: #fff !important;
-    padding: 3px 8px;
-    line-height: 2em;
-    font-weight: 500;
-border-radius: 4px;
-}
 
-span.rm-page-ref[data-tag="Seedling"] {
-    color: #0dbac6 !important;
-    padding: 3px 3px;
-    font-weight: 600;
-    line-height: 1.4em;
-}
 
 span.rm-page-ref[data-tag="Garden Notes"] {
     color: #9DBC13;
