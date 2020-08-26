@@ -188,6 +188,19 @@ span.rm-page-ref[data-tag="evergreen"]:before {
   text-shadow: 0 0 0 #FF5722 !important;*/
 }
 
+span.rm-page-ref[data-tag='acorn'], span[data-link-title^='acorn'] .rm-page-ref  {
+
+  color: #B37607 !important;
+  
+  background-color: transparent !important;
+
+  padding: 3px 3px;
+
+  font-weight: 600;
+
+  line-height: 1.4em;
+
+}
 
 
 /*               */
