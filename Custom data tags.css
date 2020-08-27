@@ -191,12 +191,25 @@ span.rm-page-ref[data-tag="evergreen"]:before {
 span.rm-page-ref[data-tag='acorn'], span[data-link-title^='acorn'] .rm-page-ref  {
 
   color: #B37607 !important;
-  
+
   background-color: transparent !important;
 
   padding: 3px 3px;
 
   font-weight: 600;
+
+  line-height: 1.4em;
+
+}
+span.rm-page-ref[data-tag='agenda'], span[data-link-title^='agenda'] .rm-page-ref  {
+
+  color: var(--text-color) !important;
+
+  background-color: transparent !important;
+
+  padding: 3px 3px;
+
+  font-weight: 800;
 
   line-height: 1.4em;
 
