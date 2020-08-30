@@ -1,0 +1,140 @@
+/* ------------- Warning - Super v1.5, bad css and bugs abound ----------------------------  */
+/* ------------This is meant to work on top of Azlen's Zenith theme -----------------------  */
+/* ----------- https://azlen.github.io/roam-themes/zenith.css -----------------------------  */
+/* ------------I have added in azlen's core.css for better mobile support -----------------  */
+/* ------------- Customer support not included :) -----------------------------------------  */
+
+/* @import url('https://azlen.github.io/roam-themes/zenith.css'); */
+
+div:not(.bp3-datepicker-month-select):not(.bp3-datepicker-year-select)>select {
+  border: 2px dashed rgb(var(--color-primary)) !important ;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+/* ----- Query styling -----*/
+
+.rm-query {
+  border: 0.5px solid #e4e9ec;
+
+  border-radius: 5px;
+}
+
+.rm-query .rm-query-title {
+  background-color: hsl(0,2%,97%) !important;
+
+  padding: 0.8em;
+
+  color: #717477 !important;
+
+  font-size: 80%;
+}
+
+.rm-reference-main.rm-query-content {
+  padding: 0.8em;
+}
+
+.rm-reference-main .rm-reference-item .controls {
+  margin-left: -1em;
+}
+.rm-reference-item{
+  border-radius:6px;
+  margin-top:8px;
+  border: 1px solid hsl(0,0%,90%) !important;
+  margin-right: 8px;
+  flex: 1 1 100%;
+  word-break:break-work;
+  padding:8px 10px 8px 2px !important;
+  background: #F8F7F7 !important
+}
+.rm-ref-page-view {
+  padding: 0.4em 0.2em !important;
+}
+
+div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span {
+  font-size: 14px !important;
+
+  opacity: 80% !important;
+
+  letter-spacing: 0.04em;
+}
+
+div.roam-sidebar-container.noselect > div > div {
+  font-size: 14px !important;
+
+  letter-spacing: 0.03em;
+}
+
+.roam-log-container .roam-log-page {
+  min-height: 0 !important;
+
+  border-top: 1px solid var(--border-color) !important;
+}
+
+
+
+/* ----- Input styling -----*/
+.check-container input[checked]{
+      text-decoration: line-through;
+}
+.check-container input[checked] + .checkmark {
+    background-color: purple !important;
+}
+
+#buffer > div{
+ background:rgb(var(--color-secondary), 1) !important
+}
+/* ----- Alias styling -----*/
+
+a .rm-alias, .rm-alias-block{
+	text-decoration: underline;
+	color:rgb(var(--color-secondary)) !important;
+
+}
+
+/* ----- Side Bar styling -----*/
+
+.rm-db-title-container:hover, .bp3-popover-wrapper:hover,{
+	background-color: rgb(164, 218, 173);
+	border-radius: 4px;
+}
+.flex-h-box{
+    padding-bottom: 6px !important;
+}
+.flex-h-box.top-row:hover{
+  	background-color: rgb(164, 218, 173) !important;
+	border-radius: 4px;
+}
+
+/* External Links*/
+.rm-alias-external,
+.rm-alias-external:hover {
+  background-color: rgba(138, 60, 200, .1) !important;
+  padding: 3px 4px;
+  line-height: 1.4em;
+  border-radius: 4px;
+}
+
+/* Namespace text color [[roam/css]] when using CTRL+C CTRL+L || CMD+C CMD+L */
+.rm-page-ref-namespace-color {
+    color: blue !important;
+    font-weight: 600;
+    transition: color .3s ease;
+}
+.rm-page-ref-namespace-color:hover {
+    color: purple !important;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+span[data-link-title^="template"] .rm-page-ref:before {
+    content: "\01F4DA";
+}
+.rm-page-ref-namespace-color + .rm-page-ref-brackets{
+	color:#B48E45 !important;
+}
+.rm-page-ref-namespace-color - .rm-page-ref-brackets{
+	color:#B48E45 !important;
+}
+span[data-link-title^="template"]  {
+    color: orange !important;
+}
