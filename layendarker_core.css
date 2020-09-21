@@ -1,0 +1,179 @@
+/*CORE + LAYENDARKER*/
+@import url('https://azlen.github.io/roam-themes/core.css');
+@import url("https://raw.githack.com/8bitgentleman/roam-custom-theme/master/Custom data tags.css");
+
+:root {
+  /* core */
+  --page-width: 720px;
+  --page-order: row-reverse;
+  --header-font: 'GT Walsheim Pro', sans-serif;
+  --body-font: 'Inter', sans-serif;
+
+  --font-size: 1.02em;
+
+  --bg-color: #141820;
+  /* --page-color: #2d3037; */
+  --page-color: rgb(45, 48, 55);
+
+  --text-color: #4c6b8a;
+  --light-text-color: #759bc1;
+  --icon-color: #7ea8d3; /* #5c7080 */
+  --bullet-color: rgba(0, 0, 0, 0.2);
+  --selection-color: #6b4cb4c4;
+
+  --page-shadow: 0px 6px 10px rgba(43, 45, 47, 0.05);
+  --block-shadow: 0px 2px 4px rgba(90, 99, 104, 0.05);
+
+  /* --color-primary: #cd7f52; */
+  --color-primary: 205, 127, 82;
+  --color-primary-highlight: #ffdd99b8;
+  --color-primary-contrast: #ffffff;
+  /* --color-secondary: #8c7beb; */
+  --color-secondary: 140, 123, 235;
+  --color-secondary-contrast: #ffffff;
+
+  --border-color: #374356;
+  --subtle-border-color: #374153;
+  --main-background-color: #2a2e36;
+  --body-background-color: #343639;
+  --reference-item-background: hsl(212, 6%, 25%);
+
+  --tag-color: #9aabd0
+}
+
+/*                    */
+/* CODE BLOCK STYLING */
+/*                    */
+/* modified from https://codemirror.net/demo/theme.html#night */
+.CodeMirror { background: var(--bg-color) !important; color: #f8f8f8 !important; }
+div.CodeMirror-selected { background: #447 !important;  }
+.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection { background: rgba(68, 68, 119, .99); }
+.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection { background: rgba(68, 68, 119, .99); }
+.CodeMirror-gutters { background: var(--bg-color); border-right: 1px solid #252525; }
+.CodeMirror-guttermarker { color: white !important; }
+.CodeMirror-guttermarker-subtle { color: #bbb !important; }
+.CodeMirror-linenumber { color: #f8f8f8; }
+.CodeMirror-cursor { border-left: 1px solid white !important; }
+span.cm-qualifier { color: #666666 !important; }
+span.cm-comment { color: #C71FF9 !important; }
+span.cm-atom { color: #B58AFD !important; }
+span.cm-number, span.cm-attribute { color: #ffd500 !important; }
+span.cm-keyword { color: #599eff !important; }
+span.cm-string { color: #37f14a !important; }
+span.cm-meta { color: #369BFF !important; }
+span.cm-variable-2, span.cm-tag { color: #99b2ff !important; }
+span.cm-variable-3, span.cm-def, span.cm-type { color: white !important; }
+span.cm-bracket { color: #8da6ce !important; }
+span.cm-builtin, pan.cm-special { color: #ff9e59 !important; }
+span.cm-link { color: #845dc4 !important; }
+span.cm-error { color: #F41000 !important; }
+.CodeMirror-activeline-background { background: #1C005A !important; }
+.CodeMirror-matchingbracket { outline:1px solid grey !important; color:white !important; }
+
+/* selection color */
+::selection {
+  color: #ffffffb0;
+  background: var(--selection-color); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: #ffffffb0;
+  background: var(--selection-color); /* Gecko Browsers */
+}
+
+.block-highlight-blue {
+  color: #ffffffb0;
+  background: var(--selection-color);
+}
+
+/*   */
+/* page body  */
+/*   */
+.roam-article > div {
+  padding: 30px 50px 50px 50px !important;
+  background: var(--page-color) !important;
+  box-shadow: var(--page-shadow) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 6px !important;
+  margin-top: 10px !important;
+}
+body,
+#app {
+  background: var(--main-background-color) !important;
+}
+html, body, .roam-app{
+    background-color: var(--main-background-color) !important;
+}
+/*   */
+/* sidebar  */
+/*   */
+.roam-sidebar-container > .roam-sidebar-content::before {
+    background: var(--main-background-color) !important;
+
+}
+
+.starred-pages-wrapper .flex-h-box, .starred-pages-wrapper .flex-h-box span {
+    font-size: 13px !important;
+    opacity: 0.6 !important;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page, .roam-body .roam-app .roam-sidebar-container > * {
+    opacity: 80%;
+    box-shadow: none !important;
+}
+.roam-topbar .bp3-icon-star::before {
+    color: rgb(var(--icon-color)) !important;
+}
+/*  */
+/* tag color */
+/*  */
+.rm-page-ref {
+    color: var(--tag-color) !important;
+    font-weight: normal;
+}
+.rm-page-ref-tag {
+  color: var(--tag-color) !important;
+    background-color: transparent;
+    padding: 1px 6px;
+    border-radius: 4px;
+}
+/*  */
+/* bullets */
+/*  */
+/* ----- Make left borders and bullets subtle -----*/
+
+.block-border-left {
+  border-left-color: var(--subtle-border-color) !important;
+}
+
+.controls .simple-bullet-outer .simple-bullet-inner {
+  background-color: var(--border-color) !important;
+}
+.roam-bullet-closed{
+  background-color:#ced9e0 !important;
+}
+.rm-caret{
+  color:#ced9e0 !important;
+}
+
+/*  */
+/* page links */
+/*  */
+.rm-page-ref-link-color {
+  color: rgb(var(--color-primary)) !important;
+  font-weight: 600;
+}
+.roam-highlight {
+    background-color: rgb(255, 221, 153, .9);
+
+}
+
+/* ------ Checkmarks ------ */
+
+.checkmark {
+  border-color: rgb(var(--color-secondary));
+}
+.check-container input:checked ~ .checkmark {
+  background: rgb(var(--color-secondary));
+}
+.check-container input:checked ~ .checkmark:after {
+  border-color: white;
+}
