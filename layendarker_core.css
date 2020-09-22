@@ -150,7 +150,14 @@ html, body, .roam-app{
 .roam-bullet-closed{
   background-color:#ced9e0 !important;
 }
+/* ------ Caret ------ */
+
 .rm-caret{
+	transform: scale(1.5);
+
+}
+
+.rm-caret::before{
   color:#ced9e0 !important;
 }
 
