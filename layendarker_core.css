@@ -184,3 +184,6 @@ html, body, .roam-app{
 .check-container input:checked ~ .checkmark:after {
   border-color: white;
 }
+#roam-right-sidebar-content>*>div>div {
+    border: 1px solid var(--border-color);
+}
