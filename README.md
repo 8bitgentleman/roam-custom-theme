@@ -1,6 +1,9 @@
 # roam-custom-themes
 These are several new and adjusted css themes for [[Roam Research]]. 
 
+*WARNING*
+As of today, 11/11/2020 there are several Roam changes that have broken Core.css. [There is a tempoary, unofficial fix](https://twitter.com/ViktorTabori/status/1324811596326199303?s=19) but it isn't perfect.
+
 ## Custom Data Tags
 My custom tag colors and adjustements. I keep these mostly the same across themes so I saved them here and can import them with one line.
 
