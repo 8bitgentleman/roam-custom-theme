@@ -281,3 +281,8 @@ select {
 
 	color:var(--text-color) !important;
 }
+
+/* ----- Make embedded tweets dark -----*/
+.twitter-tweet{
+  filter: invert() hue-rotate(180deg) !important;
+}

@@ -187,3 +187,8 @@ html, body, .roam-app{
 #roam-right-sidebar-content>*>div>div {
     border: 1px solid var(--border-color);
 }
+
+/* ----- Make embedded tweets dark -----*/
+.twitter-tweet{
+  filter: invert() hue-rotate(180deg) !important;
+}
