@@ -39,7 +39,7 @@ Can be used by importing this CSS exactly
 CREATOR:: AZLEN(Core CSS), Matthew Vogel(Panic Flavor), BearApp(Concept)
 */
 /* IMPORT ~PANIC~ THEME */
-@import url('hhttps://rawcdn.githack.com/8bitgentleman/roam-custom-theme/8bf977b596b4c5516139f6ae8da8a8ddb4f1db92/~PANIC~.css');
+@import url('https://rawcdn.githack.com/8bitgentleman/roam-custom-theme/8bf977b596b4c5516139f6ae8da8a8ddb4f1db92/~PANIC~.css');
 
 .rm-alias, .rm-alias-external,
 .rm-alias-external:hover {
