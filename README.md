@@ -8,7 +8,7 @@ As of today, 11/11/2020 there are several Roam changes that have broken Core.css
 My custom tag colors and adjustements. I keep these mostly the same across themes so I saved them here and can import them with one line.
 
 ```css
-@import url("hhttps://rawcdn.githack.com/8bitgentleman/roam-custom-theme/8bf977b596b4c5516139f6ae8da8a8ddb4f1db92/Custom data tags.css");
+@import url("https://rawcdn.githack.com/8bitgentleman/roam-custom-theme/8bf977b596b4c5516139f6ae8da8a8ddb4f1db92/Custom data tags.css");
 ```
 
 ## Zenithdecker Core
