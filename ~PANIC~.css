@@ -286,3 +286,58 @@ select {
 .twitter-tweet{
   filter: invert() hue-rotate(180deg) !important;
 }
+
+
+
+/*                                                                  */
+/* FIX AS OF 11/12/2020 TAKEN FROM HERE                             */
+/* https://gist.github.com/thesved/994257c456b0aa0a6d3d93cfc0911bba */
+/*                                                                  */
+
+/* topbar fix */
+.roam-topbar {
+  position: absolute!important;
+}
+
+/* left sidebar fix */
+.roam-sidebar-container {
+  padding-left: 45px;
+}
+
+@media only screen and (max-width: 600px) {
+  .roam-sidebar-container {
+    padding-left: 0;
+  }
+}
+
+
+/* fix resizing */
+.roam-body .roam-app .roam-main {
+  overflow-x:hidden;
+  flex-direction: row !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .roam-body .roam-app .roam-main {
+    flex: 0 0 auto!important;
+  }
+
+  .roam-body .roam-app .roam-body-main {
+    flex: 0 0 auto!important;
+  }
+}
+
+/* main panel size fix */
+.roam-body .roam-app .roam-body-main {
+  flex: 0 0 100%!important;
+  padding-left: 55px;
+}
+
+.roam-body .roam-app .roam-body-main > :first-child {
+  max-width: 100%!important;
+}
+
+/* make the main panel scroll */
+.roam-app > .flex-h-box {
+  overflow-x: scroll;
+}
