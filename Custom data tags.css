@@ -81,7 +81,7 @@ span.rm-page-ref[data-tag="Quick Capture"]:before {
     text-shadow: 0 0 0 #4FC460;
 
 }
-span.rm-page-ref[data-tag="idea bank"] {
+span.rm-page-ref[data-tag="idea bank"], span.rm-page-ref[data-tag="ideas"] {
   background-color: transparent !important;
   color: #FCB815 !important;
   padding: 3px 4px;
@@ -89,7 +89,7 @@ span.rm-page-ref[data-tag="idea bank"] {
   line-height: 1.4em;
 
 }
-span.rm-page-ref[data-tag="idea bank"]:before {
+span.rm-page-ref[data-tag="idea bank"]:before, span.rm-page-ref[data-tag="ideas"]:before {
    content: '✦ ';
   /*-webkit-text-stroke: 1px black;*/
 }
