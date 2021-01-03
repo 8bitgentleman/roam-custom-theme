@@ -183,7 +183,7 @@ div.roam-sidebar-container.noselect > div > div {
 
 /* ----- Tag styling -----*/
 
-.rm-page-ref-tag {
+.rm-page-ref--tag {
 	color: white !important;
 	background: #6F52B9 !important;
 	border-radius: 25px;
@@ -214,6 +214,52 @@ a, .rm-alias--external{
 	color: var(--icon-color-side) !important;
 }
 
+.rm-alias, .rm-alias--external,
+.rm-alias--external:hover {
+  background-color: rgba(89, 193, 218, .1) !important;
+
+  padding: 3px 4px;
+  line-height: 1.4em;
+  border-radius: 4px;
+}
+.roam-title-day-banner{
+  color: #c28e37;
+}
+
+/* block refs*/
+.rm-embed-margin-action{
+	background-color: rgb(247,180,69) !important;
+}
+.rm-embed-container{
+  	background-color: rgba(247,180,69, .1) !important;
+}
+
+/* ----- Block/Bullet styling -----*/
+.rm-bullet--closed > span > span > .rm-bullet__inner{
+  border: 4px solid rgba(180,142,69, .6) !important;
+}
+
+/* ----- official blockquotes -----*/
+
+.rm-bq{
+  border: 1px solid var(--color-primary-dark) !important;
+  color: #FAFAFA !important;
+  background-color: hsl(0,0%,24%) !important;
+  border-left: 3px solid var(--color-primary-dark) !important;
+  font-family: "Helvetica", sans-serif;
+  border-collapse: separate;
+  margin-bottom: 0px !important;
+  padding: 10px;
+  text-align: justify !important;
+}
+.rm-bq:hover{
+  box-shadow: 0 1px 1px 0 rgba(217,217,217,0.4);
+  border-left: 3px solid var(--color-secondary) !important;
+}
+.rm-bq >span>span>span> .rm-block-ref{
+  border-left:none !important;
+  border-right:none !important;
+}
 
 /* ----- Button/icon styling -----*/
 
@@ -294,9 +340,12 @@ select {
 /* https://gist.github.com/thesved/994257c456b0aa0a6d3d93cfc0911bba */
 /*                                                                  */
 
-/* topbar fix */
-.roam-topbar {
-  position: absolute!important;
+/* FIXING resizable interface */
+
+/* fix: collapsed sidebar windows by @_robertkirk */
+.window-headers:only-child {
+  text-orientation: mixed;
+  writing-mode: vertical-lr;
 }
 
 /* left sidebar fix */
@@ -315,6 +364,7 @@ select {
 .roam-body .roam-app .roam-main {
   overflow-x:hidden;
   flex-direction: row !important;
+  max-width: var(--page-width) !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -333,11 +383,89 @@ select {
   padding-left: 55px;
 }
 
-.roam-body .roam-app .roam-body-main > :first-child {
+.roam-body .roam-app .roam-body-main > [style*="padding-right"] {
+  max-width: 100%!important;
+  padding-left:unset!important;
+  padding-right:unset!important;
+}
+
+.rm-block-text {
   max-width: 100%!important;
 }
 
 /* make the main panel scroll */
 .roam-app > .flex-h-box {
   overflow-x: scroll;
+}
+
+.roam-article {
+  max-width: 100%;!important;
+  overflow-x: hidden;
+}
+
+/* right sidebar fix */
+#right-sidebar {
+  flex: 0 0 auto!important;
+}
+
+#right-sidebar .rm-resize-handle {
+  left:-4px!important; /* in the original code this has set to -4 which is invalid */
+}
+
+#roam-right-sidebar-content {
+  flex: 0 0 auto!important;
+  overflow: scroll;
+}
+
+#roam-right-sidebar-content .sidebar-content > * {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding-top: 45px;
+}
+
+/* right sidebar header fixes */
+#roam-right-sidebar-content .window-headers {
+  margin-left: 5px!important;
+  flex-direction: row !important;
+  align-items: center!important;
+  position: relative!important;
+}
+
+#roam-right-sidebar-content .window-headers .bp3-icon-cross {
+  order: 1!important;
+  margin-right: 10px;
+}
+
+#roam-right-sidebar-content .window-headers > :nth-child(1) {
+ order: 2;
+}
+
+#roam-right-sidebar-content .window-headers > :nth-child(2) {
+ order: 3;
+}
+
+#roam-right-sidebar-content .window-headers button.bp3-small {
+  color: var(--text-color);
+  order: 4;
+}
+
+#roam-right-sidebar-content .window-headers > [style*="0px"] {
+ order: 5;
+}
+
+#roam-right-sidebar-content .sidebar-content > * > * {
+  padding-right: 10px!important;
+}
+
+/* sidebar title editing */
+.rm-sidebar-outline .rm-title-editing-display {
+	display: inline-block;
+}
+.rm-sidebar-outline .rm-title-editing-display textarea {
+	margin-left: 0!important;
+}
+
+/* visualize the right sidebar resize-handle */
+.rm-resize-handle:hover, .rm-resize-handle:focus {
+    background-color: #66666640;
 }
