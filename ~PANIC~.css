@@ -188,7 +188,7 @@ div.roam-sidebar-container.noselect > div > div {
 	background: #6F52B9 !important;
 	border-radius: 25px;
 	padding: 3px 8px;
-	line-height: 2em;
+	/* line-height: 2em; */
 	font-weight: 500;
 }
 
@@ -219,7 +219,7 @@ a, .rm-alias--external{
   background-color: rgba(89, 193, 218, .1) !important;
 
   padding: 3px 4px;
-  line-height: 1.4em;
+  /* line-height: 1.4em; */
   border-radius: 4px;
 }
 .roam-title-day-banner{
@@ -319,7 +319,11 @@ select {
     padding-bottom: 6px !important;
 
 }
-
+/* ----- popups -----*/
+.bp3-popover{
+  background-color: #312953;
+  border-radius: 4px;
+}
 /* ----- Encrypted styling -----*/
 
 .rm-encrypted-block{

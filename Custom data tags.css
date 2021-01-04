@@ -127,7 +127,7 @@ span.rm-page-ref[data-tag="personal"] {
   	padding: 3px 7px;
     font-weight: 500;
     border-radius: 4px;
-    line-height: 2em;
+    /* line-height: 2em; */
 }
 
 span.rm-page-ref[data-tag="awe"] {
