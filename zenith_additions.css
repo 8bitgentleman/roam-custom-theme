@@ -1,15 +1,139 @@
 /* ------------- Warning - Super v1.5, bad css and bugs abound ----------------------------  */
-/* ------------This is meant to work on top of Azlen's Zenith theme -----------------------  */
+/* ------------This is meant to work instead of Azlen's Zenith theme -----------------------  */
 /* ----------- https://azlen.github.io/roam-themes/zenith.css -----------------------------  */
 /* ------------I have added in azlen's core.css for better mobile support -----------------  */
 /* ------------- Customer support not included :) -----------------------------------------  */
 
-/* @import url('https://azlen.github.io/roam-themes/zenith.css'); */
 
+@import url('https://thesved.github.io/css/roamCSS.css');
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --page-width: 616px;
+    --page-width-side: 616px;
+    --page-order: row; /* new pages show up to the right */
+    /*--page-order: row; /* new pages show up to the left */
+
+    --header-font: "Source Sans Pro", "Inter", sans-serif;
+    --body-font: "Source Sans Pro", "Inter", sans-serif;
+
+    --bg-color: #EEEEEE;
+    --page-color: rgba(255, 255, 255, 0.95);
+
+    --text-color: #000000;
+    --icon-color: #5c7080;
+    --bullet-color: rgba(0, 0, 0, 0.2);
+
+    --page-shadow: 0px 8px 14px rgba(0, 0, 0, 0.05);
+  	--box-shadow-color: 164, 219, 255;
+
+    --color-primary: 73, 197, 91;
+    --color-primary-contrast: #FFFFFF;
+    --color-secondary: 147, 100, 235;
+
+    --color-secondary-contrast: #FFFFFF;
+    --border-color: #CED9E0
+}
+
+/* nicer bullet points */
+.rm-bullet.rm-bullet--closed .rm-bullet__inner {
+    border: 4px solid #CED9E0 !important;
+    background-color: #394B59 !important;
+    width: 5px !important;
+    height: 5px !important;
+}
+.rm-bullet .rm-bullet__inner {
+    background-color: #394B59 !important;
+}
+
+/* block border */
+.block-border-left {
+    border-left: 1px solid #BFCCD6;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(191, 204, 214);
+}
+
+/* popup border */
+.bp3-popover, #app .bp3-popover .bp3-popover-arrow svg * {
+  border: 0.5px solid var(--border-color); /*#e4e9ec*/
+}
+
+/* blockquotes */
+.rm-bq:hover{
+  box-shadow: 0 1px 1px 0 rgba(217,217,217,0.4);
+  border-left: 5px solid rgb(var(--color-secondary)) !important;
+}
+.rm-bq >span>span>span> .rm-block-ref{
+  border-left:none !important;
+  border-right:none !important;
+}
+
+.rm-highlight {
+    background-color: rgba(var(--color-secondary), .3) !important;
+}
+.rm-title-display{
+  margin-left:0px !important;
+}
+
+/* CHANGE COLOURS IN CANVAS */
+canvas[data-id="layer2-node"] {
+    filter: invert(1) hue-rotate(110deg) saturate(2.5);
+}
+/* block embeds */
+.rm-embed-margin-action{
+	background-color: rgb(var(--color-secondary)) !important
+}
+.rm-embed-container{
+  	background-color: rgba(var(--color-secondary), .1) !important
+
+}
+.sidebar-content {
+    flex-direction: row !important;
+}
+/* ----- revert direction of sidebar pages -----*/
+
+#roam-right-sidebar-content {
+    flex-direction: row !important;
+
+}
+span.rm-page-ref[data-tag="internal"] {
+  width: 300px;
+  margin: 50px auto;
+  border-radius: 5px;
+  background: #00bfb6 !important;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  font-weight: 900;
+  font-family: arial;
+  position: relative;
+  text-decoration:underline !important;
+}
+
+
+/* speech bubble 13 */
+
+span.rm-page-ref[data-tag="internal"]:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 8px solid #00bfb6;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #00bfb6;
+  border-bottom: 8px solid transparent;
+  right: -10px;
+  top: 0px;
+}
+.checkmark{ border-radius: 50% !important;}
 div:not(.bp3-datepicker-month-select):not(.bp3-datepicker-year-select)>select {
   border: 2px dashed rgb(var(--color-primary)) !important ;
   border-radius: 4px;
   font-style: italic;
+  /*padding: 3px 7px;*/
 }
 
 /* ----- Query styling -----*/
@@ -21,6 +145,7 @@ div:not(.bp3-datepicker-month-select):not(.bp3-datepicker-year-select)>select {
 }
 
 .rm-query .rm-query-title {
+  /*background-color: #f7f8f8 !important;*/
   background-color: hsl(0,2%,97%) !important;
 
   padding: 0.8em;
@@ -71,8 +196,61 @@ div.roam-sidebar-container.noselect > div > div {
   border-top: 1px solid var(--border-color) !important;
 }
 
+/* ----- Query styling -----
+.rm-query-title {
+  display: none !important;
+}
+.rm-query {
+  border: 0.5px solid #e4e9ec;
 
+  border-radius: 5px;
+-webkit-box-shadow: inset 0px 0px 8px 1px rgba(71,71,71,0.54);
+-moz-box-shadow: inset 0px 0px 8px 1px rgba(71,71,71,0.54);
+box-shadow: inset 0px 0px 8px 1px rgba(71,71,71,0.54);
 
+}
+
+.rm-query .rm-query-title {
+  background-color: #f7f8f8;
+
+  padding: 0.8em;
+
+  color: #d1dbe2;
+
+  font-size: 80%;
+}
+
+.rm-reference-main.rm-query-content {
+  padding: 0.8em;
+}
+
+.rm-reference-main .rm-reference-item .controls {
+  margin-left: -1em;
+}
+
+.rm-ref-page-view {
+  padding: 0.4em 0.2em;
+}
+
+div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span {
+  font-size: 14px !important;
+
+  opacity: 80%;
+
+  letter-spacing: 0.04em;
+}
+
+div.roam-sidebar-container.noselect > div > div {
+  font-size: 14px !important;
+
+  letter-spacing: 0.03em;
+}
+
+.roam-log-container .roam-log-page {
+  min-height: 0 !important;
+
+  border-top: 1px solid var(--border-color) !important;
+}*/
 /* ----- Input styling -----*/
 .check-container input[checked]{
       text-decoration: line-through;
@@ -91,6 +269,33 @@ a .rm-alias, .rm-alias-block{
 	color:rgb(var(--color-secondary)) !important;
 
 }
+/* ----- Tag styling -----*/
+span.rm-page-ref[data-tag="writing"] {
+    background: radial-gradient(#9198e5, #59A6E3);
+    padding: 3px 4px;
+    font-weight: 500;
+    line-height: 1.4em;
+    border-radius: 4px;
+    color: white !important;
+
+}
+
+span.rm-page-ref[data-tag="recipes"] {
+    color: #FF5722 !important;
+    background-color: transparent;
+    padding: 3px 4px;
+    font-weight: 500;
+    line-height: 1.4em;
+}
+
+span.rm-page-ref[data-tag="recipes"]:before {
+    content: '🌶 ';
+    color: transparent;
+    text-shadow: 0 0 0 #FF5722 !important;
+}
+span.rm-page-ref[data-tag="personal"] {
+    background-color: #616161 !important;
+}
 
 /* ----- Side Bar styling -----*/
 
@@ -104,6 +309,40 @@ a .rm-alias, .rm-alias-block{
 .flex-h-box.top-row:hover{
   	background-color: rgb(164, 218, 173) !important;
 	border-radius: 4px;
+}
+/* ----- Tag Test styling -----*/
+
+span.rm-page-ref[data-tag="Delegated"] {
+    background: #CECECE !important;
+    color: #555555 !important;
+    padding: 2px 0px 2px 5px;
+    font-size: 13px;
+    line-height: 1em;
+    font-weight: 500;
+    border-radius: 3px 0 0 3px;
+    position:relative;
+}
+
+span.rm-page-ref[data-tag="Delegated"] + span[data-link-title] {
+    background: #E3E3E3 !important;
+    color: #9E9E9E !important;
+    padding: 2px 5px 2px 15px;
+    font-size: 13px;
+    line-height: 1em;
+    font-weight: 400;
+    border-radius: 0 3px 3px 0;
+    margin-left: -5px;
+}
+
+span.rm-page-ref[data-tag="Delegated"]:after, span.rm-page-ref[data-tag="Delegated"]:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
 }
 
 /* External Links*/
