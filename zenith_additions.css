@@ -195,6 +195,17 @@ div.roam-sidebar-container.noselect > div > div {
 
   border-top: 1px solid var(--border-color) !important;
 }
+/* hide the carrot after the option input */
+.rm-option:after{
+  display:none;
+}
+/* fix the sidebar height and width */
+.roam-sidebar-container > .roam-sidebar-content::before{
+  height: 200vh !important;
+}
+.roam-sidebar-container {
+  width:280px !important;
+}
 
 /* ----- Query styling -----
 .rm-query-title {

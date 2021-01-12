@@ -14,6 +14,8 @@ CREATOR:: AZLEN(Core CSS), Matthew Vogel(Panic Flavor), BearApp(Concept)
 :root {
   --theme-mode: 'dark'
   --page-width: 616px;
+  --page-width-side: 616px;
+
   --page-order: row-reverse; /* new pages show up to the right */
 
   --header-font: 'Open Sans', sans-serif;
