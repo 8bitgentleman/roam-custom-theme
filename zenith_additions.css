@@ -70,10 +70,11 @@
   border-left:none !important;
   border-right:none !important;
 }
-
+/* text highlights */
 .rm-highlight {
     background-color: rgba(var(--color-secondary), .3) !important;
 }
+/* page title */
 .rm-title-display{
   margin-left:0px !important;
 }
@@ -176,6 +177,7 @@ div:not(.bp3-datepicker-month-select):not(.bp3-datepicker-year-select)>select {
   padding: 0.4em 0.2em !important;
 }
 
+/* sidebar */
 div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span {
   font-size: 14px !important;
 
@@ -186,7 +188,6 @@ div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span {
 
 div.roam-sidebar-container.noselect > div > div {
   font-size: 14px !important;
-
   letter-spacing: 0.03em;
 }
 

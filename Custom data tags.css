@@ -29,12 +29,14 @@ span.rm-page-ref[data-tag="quotes"], span.rm-page-ref[data-tag="quote"] {
     line-height: 2em;
 }
 
-span.rm-page-ref[data-tag="fav"] {
+span.rm-page-ref[data-tag="fav"],
+span.rm-page-ref[data-tag="favorite"] {
   background: transparent !important;
   color: #F44336 !important;
 }
 
-span.rm-page-ref[data-tag="fav"]:before {
+span.rm-page-ref[data-tag="fav"]:before,
+span.rm-page-ref[data-tag="favorite"]:before {
   background: transparent !important;
     content: '★ '
 }
