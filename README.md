@@ -1,5 +1,14 @@
 # roam-custom-themes
-These are several new and adjusted css themes for [[Roam Research]]. 
+These are several new and adjusted css themes and JS scripts for use in [[Roam Research]]. 
+
+- Roam Mobile Notifications
+    - Disclaimer time! This was hacked together in ~30 minutes working with tools I already knew worked. 
+        - This is not completely cross platform, only works on android, chrome browsers, firefox browsers, and windows 10. No iOS support
+        - This relies on a third party app, [Join](https://joaoapps.com/join/) a very popular android automation app, to work as a receiver. That being said Join is an incredible app that uses your own google drive for notifications. My understanding is that they are not stored on a random developer's server but I haven't researched exactly how he does it.
+        - API keys are stored in the graph in plaintext. Obviously this is a terrible idea but for a quick test it worked fine
+        - A notification is sent whenever there is a change to the pull. This means that you will get a notification when an item is added **and** and one is removed. In practice this double spams notifications.
+        
+
 
 *WARNING*
 As of today, 11/11/2020 there are several Roam changes that have broken Core.css. [There is a tempoary, unofficial fix](https://twitter.com/ViktorTabori/status/1324811596326199303?s=19) but it isn't perfect.
