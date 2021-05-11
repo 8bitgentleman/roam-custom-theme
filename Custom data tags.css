@@ -217,6 +217,9 @@ span.rm-page-ref[data-tag='agenda'], span[data-link-title^='agenda'] .rm-page-re
 
 }
 
+span.rm-page-ref[data-tag="Experiment"]:before {
+    content: '🧪'
+}
 
 /*               */
 /* Maggie's Tags */
