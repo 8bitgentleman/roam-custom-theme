@@ -2,7 +2,7 @@
 /* Source: https://gist.github.com/azlen/cc8d543f0e46e17d978e705650df0e9e */
 /* Change line 66 to adjust the toggle shortcut (credit to Justin Shaffner for the idea) - default is Ctrl+i which works well on macOS but not Windows */
 /* Toggle changes by abhayprasanna  */
-/* CSS variables added by matt vogel https://github.com/8bitgentleman/roam-custom-theme */
+/* v3 CSS variables added by matt vogel https://github.com/8bitgentleman/roam-custom-theme */
 /* ======= OPTIONS ======== */
 
 // BULLET
