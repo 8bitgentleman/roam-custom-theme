@@ -84,6 +84,9 @@
         }
 
         lines.push(`${indentPrefix}${prefix} ${content}`)
+        // if there are children make sure they are in the correct order
+        block.children?.sort((a, b) => a.order - b.order );
+
         block.children?.forEach((block) => {
             if (!block['view-type'] ) viewType = 'bullet'
             // else if (block['view-type'] == 'numbered') viewType = 'numbered'
