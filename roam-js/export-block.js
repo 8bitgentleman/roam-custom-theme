@@ -62,7 +62,7 @@
       }
       return text
     }
-    function expandChildren(block, level = 0, viewType = 'bullet') {
+    function expandChildren(block, level = 0, viewType = 'bullet', table=false) {
         const lines = []
         let indentPrefix = ''
         let prefix = ''
