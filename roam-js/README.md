@@ -26,7 +26,8 @@ To install a plugin copy the code (contents of the JS file) into a roam javascri
 
 
 - ### export-block.js <a name = "export"></a>
-  Adds an option to the right click menu to export a block and all its children as flat markdown
+  Adds an option to the right click menu to export a block and all its children as flat markdown. 
+  Also included is a .json file for easy import into Roam 
 
 - ### random.js <a name = "random"></a>
   Adds a button to the left sidebar to take you to a random page. 

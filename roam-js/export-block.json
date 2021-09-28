@@ -1,0 +1,182 @@
+[
+    {
+        "create-time": 1632860681783,
+        "title": "roam/js",
+        ":create/user": {
+            ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+        },
+        "children": [
+            {
+                "edit-time": 1632860799293,
+                "children": [
+                    {
+                        "string": "**Author**",
+                        "create-time": 1620922714364,
+                        ":create/user": {
+                            ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                        },
+                        "children": [
+                            {
+                                "string": "Me, [[Matt Vogel]]",
+                                "create-time": 1620922725371,
+                                ":block/refs": [
+                                    {
+                                        ":block/uid": "fsO4ejand"
+                                    }
+                                ],
+                                "refs": [
+                                    {
+                                        "uid": "fsO4ejand"
+                                    }
+                                ],
+                                ":create/user": {
+                                    ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                                },
+                                "uid": "vlWNPvnU9",
+                                "edit-time": 1632860769135,
+                                ":edit/user": {
+                                    ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                                }
+                            },
+                            {
+                                "string": "Twitter:: [@todayIwasbetter](https://twitter.com/todayIwasbetter)",
+                                "create-time": 1620922732396,
+                                ":block/refs": [
+                                    {
+                                        ":block/uid": "myGdN1p4b"
+                                    }
+                                ],
+                                "refs": [
+                                    {
+                                        "uid": "myGdN1p4b"
+                                    }
+                                ],
+                                ":create/user": {
+                                    ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                                },
+                                "uid": "RXxf1LqmA",
+                                "edit-time": 1632860769135,
+                                ":edit/user": {
+                                    ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                                }
+                            },
+                            {
+                                "string": "How Best To Contact Me:: Roam Slack, Twitter are good",
+                                "create-time": 1620922736477,
+                                ":block/refs": [
+                                    {
+                                        ":block/uid": "lpH1cM3fb"
+                                    }
+                                ],
+                                "refs": [
+                                    {
+                                        "uid": "lpH1cM3fb"
+                                    }
+                                ],
+                                ":create/user": {
+                                    ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                                },
+                                "uid": "AN3D5l5Fv",
+                                "edit-time": 1632860769135,
+                                ":edit/user": {
+                                    ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                                }
+                            },
+                            {
+                                "string": "This code is open source! If you have ideas for improvements or run into a bug feel free to fork it or report it over on the [Github repo](https://github.com/8bitgentleman/roam-custom-theme/tree/master/roam-js)",
+                                "create-time": 1620922741532,
+                                "uid": "rkHq00aMY",
+                                "edit-time": 1632860821402,
+                                ":create/user": {
+                                    ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                                },
+                                ":edit/user": {
+                                    ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                                }
+                            }
+                        ],
+                        "uid": "kJCfB3DrE",
+                        "edit-time": 1632860769135,
+                        ":edit/user": {
+                            ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                        }
+                    },
+                    {
+                        "string": "code",
+                        "create-time": 1632860837511,
+                        ":create/user": {
+                            ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                        },
+                        "children": [
+                            {
+                                "edit-time": 1632860735073,
+                                "children": [
+                                    {
+                                        "string": "```javascript\n{\n    function exportToMarkdownFile(markdownData, fileName) {\n        let dataUri = 'data:text/plain;charset=utf-8,'+ encodeURIComponent(markdownData);\n\n        let exportFileDefaultName = fileName + '.md';\n\n        let linkElement = document.createElement('a');\n        linkElement.setAttribute('href', dataUri);\n        linkElement.setAttribute('download', exportFileDefaultName);\n        linkElement.click();\n    }\n\n    function searchForRef(uid){\n        let queryText = `[:find (pull ?e [\n                        :block/string\n                        :block/order\n                        :block/heading\n                        :block/text-align\n                        ]) \n                    :in $ ?uid\n                    :where [?e :block/uid ?uid]]`;\n        blockInfo = window.roamAlphaAPI.q(queryText, uid)[0][0];\n        return blockInfo\n    }\n    function renderText(text){\n      // searching for block aliases [Use Humor to soften](((RXUbeHekc)))\n      regexp = /\\[([^\\[\\]]+?)\\]\\(\\(\\((.+?)\\)\\)\\)/gm\n      blockAliases = [...text.matchAll(regexp)];\n      if (blockAliases.length != 0) {\n        blockAliases.forEach((a) => {\n          // console.log(a[1])\n          text = text.replace(a[0], a[1])\n          // console.log(text)\n\n        })\n      }\n\n      // searching for block refs ((RXUbeHekc))\n      regexp = /\\(\\((.+?)\\)\\)/gm;\n\n      matches = [...text.matchAll(regexp)];\n\n      if (matches.length != 0) {\n        matches.forEach((m) => {\n          // console.log(m[1])\n          rev = searchForRef(m[1]).string\n          text = text.replace(m[0], rev)\n          // console.log(text)\n\n        })\n      }\n      //search for block quotes\n      regexp = /\\[\\[\\>\\]\\]/gm\n      blockQuotes = [...text.matchAll(regexp)];\n      if (blockQuotes.length != 0) {\n        blockQuotes.forEach((a) => {\n          // console.log(a[1])\n          text = text.replace(a[0], '>')\n          // console.log(text)\n\n        })\n      }\n      return text\n    }\n    function arrayToMarkdown(tableArray){\n        var masterTable = [];\n        // find the length of the longest row\n        var longest = tableArray.reduce((maxI,el,i,arr) => (el.length>arr[maxI].length) ? i : maxI, 0);\n        \n        //fill the column name array with dummy info if it's too short\n        if(tableArray[0].length < tableArray[longest].length){\n            lengthDif = tableArray[longest].length - tableArray[0].length;\n            fillArray = Array(lengthDif).fill(\"-\");\n            tableArray[0] = tableArray[0].concat(fillArray);\n        }\n        //header seperator row needs to be added last after calcs are done\n        var header = Array.from(tableArray[longest]);\n        tableArray.splice(1, 0, header.fill('-'));\n\n        // convert the array to text \n        tableArray.forEach(function (item, index) {\n            if(item.length>1){\n                masterTable.push(item.join('|'))\n            }else{\n                masterTable.push(item.toString() + '|')\n            }\n        // console.log(masterTable.join('\\n'));\n        \n        });\n        return masterTable.join('\\n')\n    }\n    \n    function expandTableChildren(block, level = 0, viewType = 'bullet') {\n\n        const tableLines = []\n        block.children?.forEach((block) => {\n            var row = []\n            let content = renderText(block.string)\n            row.push(content)\n            row.push(expandTableChildren(block, level + 1, viewType))\n            tableLines.push(row.flat(Infinity));\n        })\n        // console.log(tableLines)\n        return tableLines\n    }\n    \n    function expandChildren(block, level = 0, viewType = 'bullet') {\n        const lines = []\n        let indentPrefix = ''\n        let prefix = ''\n        // if (level >= 1) indentPrefix = '\\t'.repeat(level)\n        let content = renderText(block.string)\n        \n        if (!block.string.startsWith(\"{{[[table]]}}\")){\n          if (block.heading) prefix = '#'.repeat(block.heading)\n          // else if (viewType == 'numbered') prefix += block.order + 1 + \".\"\n          // else if (viewType == 'document') prefix += ''\n          // else if (viewType == 'bullet') prefix += '*'\n          else prefix += '*'\n        }\n        //Blocks can have newlines inside them\n        if (content.includes('\\n')){\n            let new_content = content.trimEnd()\n            new_content = new_content.replace('\\n', `\\n${indentPrefix} `)\n            content = new_content + '\\n'\n        }\n\n        lines.push(`${indentPrefix}${prefix} ${content}`)\n        // if there are children make sure they are in the correct order\n        block.children?.sort((a, b) => a.order - b.order );\n\n        block.children?.forEach((block) => {\n            if (!block['view-type'] ) viewType = 'bullet'\n            // else if (block['view-type'] == 'numbered') viewType = 'numbered'\n            // else if (block['view-type'] == 'document') viewType = 'numbered'\n            // else if (block['view-type'] == 'bullet') viewType = 'bullet'\n            if (block.string.startsWith(\"{{[[table]]}}\")){\n              rowArrays = expandTableChildren(block, level + 1)\n              lines.push(\"\")\n              lines.push(arrayToMarkdown(rowArrays))\n            } else {\n              lines.push(expandChildren(block, level + 1, viewType))\n            }\n        })\n        return lines.join('\\n')\n    }\n\n    function exportBlock(parentUID){\n        let queryText = `[:find (pull ?e [\n                                :node/title \n                                :block/string\n                                :block/order\n                                :block/heading\n                                :block/text-align\n                                :block/refs\n                                :children/view-type\n                                :block/children \n                                {:block/children ...}\n                                ]) \n                            :in $ ?parentUID\n                            :where [?e :block/uid ?parentUID]]`;\n        blockInfo = window.roamAlphaAPI.q(queryText, parentUID)[0][0];\n        // window.roamAlphaAPI.q(queryText, parentUID);\n        markdown = expandChildren(blockInfo)\n        // console.log(blockInfo)\n        exportToMarkdownFile(markdown, \"block export\")\n    }\n    // exportBlock(\"fGZjyJFJS\")\n    // exportBlock(\"De3R0-NO5\")\n    roamAlphaAPI.ui.blockContextMenu.addCommand(\n        {label: \"Export to Markdown\",  \n        callback: (e)=>exportBlock(e['block-uid'])\n        }\n    )\n}```",
+                                        "create-time": 1632860736274,
+                                        "uid": "4434YjVI2",
+                                        "edit-time": 1632860741239,
+                                        ":create/user": {
+                                            ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                                        },
+                                        ":edit/user": {
+                                            ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                                        }
+                                    }
+                                ],
+                                "refs": [
+                                    {
+                                        "uid": "QJ61G6862"
+                                    }
+                                ],
+                                "uid": "GPW8wXuM-",
+                                ":block/refs": [
+                                    {
+                                        ":block/uid": "QJ61G6862"
+                                    }
+                                ],
+                                "string": "{{[[roam/js]]}}",
+                                ":create/user": {
+                                    ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                                },
+                                "create-time": 1632860730515,
+                                ":edit/user": {
+                                    ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                                }
+                            }
+                        ],
+                        "uid": "SfikTkCTr",
+                        "edit-time": 1632860841920,
+                        ":edit/user": {
+                            ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                        }
+                    }
+                ],
+                "refs": [
+                    {
+                        "uid": "09-22-2021"
+                    }
+                ],
+                "uid": "EmVgc5B5Q",
+                ":block/refs": [
+                    {
+                        ":block/uid": "09-22-2021"
+                    }
+                ],
+                "string": "Block to markdown export v2 [[September 22nd, 2021]]",
+                ":create/user": {
+                    ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                },
+                "create-time": 1632860685144,
+                ":edit/user": {
+                    ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+                }
+            }
+        ],
+        "uid": "QJ61G6862",
+        "edit-time": 1632860681783,
+        ":edit/user": {
+            ":user/uid": "rTvmoxu9FGSWal8SbCZiywCL2Nm1"
+        }
+    }
+]
