@@ -22,7 +22,9 @@
         blockInfo = window.roamAlphaAPI.q(queryText, uid)[0][0];
         return blockInfo
     }
+
     function renderText(text){
+      "Convert Roam specific markdown to regular markdown"
       // searching for block aliases [Use Humor to soften](((RXUbeHekc)))
       regexp = /\[([^\[\]]+?)\]\(\(\((.+?)\)\)\)/gm
       blockAliases = [...text.matchAll(regexp)];
@@ -37,9 +39,7 @@
 
       // searching for block refs ((RXUbeHekc))
       regexp = /\(\((.+?)\)\)/gm;
-
       matches = [...text.matchAll(regexp)];
-
       if (matches.length != 0) {
         matches.forEach((m) => {
           // console.log(m[1])
@@ -49,7 +49,8 @@
 
         })
       }
-      //search for block quotes
+
+      //search for block quotes >
       regexp = /\[\[\>\]\]/gm
       blockQuotes = [...text.matchAll(regexp)];
       if (blockQuotes.length != 0) {
@@ -62,6 +63,7 @@
       }
       return text
     }
+
     function arrayToMarkdown(tableArray){
         var masterTable = [];
         // find the length of the longest row
@@ -91,13 +93,18 @@
     }
     
     function expandTableChildren(block, level = 0, viewType = 'bullet') {
-
+      // need to handle the first column somehow
         const tableLines = []
-        block.children?.forEach((block) => {
+        block.children?.forEach((child) => {
             var row = []
-            let content = renderText(block.string)
+            let content = renderText(child.string)
+
+            // newlines are handled differently inside tables
+            if (content.includes('\n')){
+                content = content.replaceAll('\n', `<br />`)
+            }
             row.push(content)
-            row.push(expandTableChildren(block, level + 1, viewType))
+            row.push(expandTableChildren(child, level + 1, viewType))
             tableLines.push(row.flat(Infinity));
         })
         // console.log(tableLines)
@@ -111,37 +118,48 @@
         // if (level >= 1) indentPrefix = '\t'.repeat(level)
         let content = renderText(block.string)
         
-        if (!block.string.startsWith("{{[[table]]}}")){
-          if (block.heading) prefix = '#'.repeat(block.heading)
-          // else if (viewType == 'numbered') prefix += block.order + 1 + "."
-          // else if (viewType == 'document') prefix += ''
-          // else if (viewType == 'bullet') prefix += '*'
-          else prefix += '*'
-        }
         //Blocks can have newlines inside them
         if (content.includes('\n')){
             let new_content = content.trimEnd()
             new_content = new_content.replace('\n', `\n${indentPrefix} `)
             content = new_content + '\n'
         }
-
-        lines.push(`${indentPrefix}${prefix} ${content}`)
         // if there are children make sure they are in the correct order
         block.children?.sort((a, b) => a.order - b.order );
 
-        block.children?.forEach((block) => {
-            if (!block['view-type'] ) viewType = 'bullet'
-            // else if (block['view-type'] == 'numbered') viewType = 'numbered'
-            // else if (block['view-type'] == 'document') viewType = 'numbered'
-            // else if (block['view-type'] == 'bullet') viewType = 'bullet'
-            if (block.string.startsWith("{{[[table]]}}")){
-              rowArrays = expandTableChildren(block, level + 1)
-              lines.push("")
-              lines.push(arrayToMarkdown(rowArrays))
-            } else {
-              lines.push(expandChildren(block, level + 1, viewType))
-            }
-        })
+        if (!block.string.startsWith("{{[[table]]}}")){
+          if (block.heading) prefix = '#'.repeat(block.heading)
+          // else if (viewType == 'numbered') prefix += block.order + 1 + "."
+          // else if (viewType == 'document') prefix += ''
+          // else if (viewType == 'bullet') prefix += '*'
+          else prefix += '*'
+          lines.push(`${indentPrefix}${prefix} ${content}`)
+        
+          block.children?.forEach((child) => {
+              if (!child['view-type'] ) viewType = 'bullet'
+              // else if (child['view-type'] == 'numbered') viewType = 'numbered'
+              // else if (child['view-type'] == 'document') viewType = 'numbered'
+              // else if (child['view-type'] == 'bullet') viewType = 'bullet'
+              if (child.string.startsWith("{{[[table]]}}")){
+                // console.log(child);
+                rowArrays = expandTableChildren(child, level + 1)
+                lines.push("")
+                lines.push(arrayToMarkdown(rowArrays))
+              } else {
+                lines.push(expandChildren(child, level + 1, viewType))
+              }
+          })
+        } else {
+          block.children?.forEach((child) => {
+            rowArrays = expandTableChildren(child, level + 1)
+            console.log(child)
+            lines.push("")
+            lines.push(arrayToMarkdown(rowArrays))
+          })
+        }
+        
+
+        
         return lines.join('\n')
     }
 
@@ -162,14 +180,15 @@
         blockInfo = window.roamAlphaAPI.q(queryText, parentUID)[0][0];
         // window.roamAlphaAPI.q(queryText, parentUID);
         markdown = expandChildren(blockInfo)
-        // console.log(blockInfo)
+        // console.log(markdown)
         exportToMarkdownFile(markdown, "block export")
     }
     // exportBlock("fGZjyJFJS")
-    // exportBlock("De3R0-NO5")
-    roamAlphaAPI.ui.blockContextMenu.addCommand(
-        {label: "Export to Markdown",  
-        callback: (e)=>exportBlock(e['block-uid'])
-        }
-    )
+    exportBlock("gDoqwyWsI")
+    // exportBlock("jW880zNwy")
+    // roamAlphaAPI.ui.blockContextMenu.addCommand(
+    //     {label: "Export to Markdown",  
+    //     callback: (e)=>exportBlock(e['block-uid'])
+    //     }
+    // )
 }
