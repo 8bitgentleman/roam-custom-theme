@@ -6,16 +6,19 @@
     // this table was used as reference https://www.w3schools.com/html/html_tables.asp
 
     async function pasteTable(e) {
+        // log the context (block uid)
         console.log(e);
         // get the clipboard text
         const clipText = await navigator.clipboard.readText();
+        // log the clipboard
         console.log(clipText);
-        // split into rows
 
-        clipRows = clipText.split(String.fromCharCode(13));
+        // split into rows by the ENTER key
+        // clipRows = clipText.split(String.fromCharCode(13));
+        clipRows = clipText.split(/\r?\n/);
         console.log(clipRows);
-        // split rows into columns
 
+        // split rows into columns
         for (i = 0; i < clipRows.length; i++) {
             clipRows[i] = clipRows[i].split(String.fromCharCode(9));
         }
