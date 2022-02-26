@@ -13,6 +13,8 @@
   - [export-block.js](#export)
   - [random.js](#random)
   - [bulletpath.js](#bulletpath)
+  - [alias-selection.js](#alias)
+  - [htmlTableToRoam.js](#table)
 
 - [Authors](#authors)
 
@@ -34,7 +36,13 @@ To install a plugin copy the code (contents of the JS file) into a roam javascri
 
 - ### bulletpath.js <a name = "bulletpath"></a>
     CSS and usibility modifications to the infamous bulletpath JS hack by Azlen Elza
-  
+
+- ### alias-selection.js <a name = "alias"></a>
+    Right-Click menu plugin: Converts the selected text in a block into an alias. To use select text in a block then select the plugin from the right clicke block menu. The new alias can then be pasted anywhere.
+
+- ### htmlTableToRoam.js <a name = "table"></a>
+    Right-Click menu plugin: Converts an HTML table copied to the clipboard into a Roam Table format. To use select the table text from a webpage ([this table](https://www.w3schools.com/html/html_tables.asp) used for testing) then in roam select the plugin from the right click block menu.
+    
 ## ⛏️ Built Using <a name = "built_using"></a>
 - javascript
 
