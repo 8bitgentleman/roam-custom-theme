@@ -26,10 +26,15 @@ if (!checkForButton) {
 
   var nextIconButton = roamTopbar[0].lastElementChild;
   var flexDiv = document.createElement("div");
-  flexDiv.id = nameToUse + "-flex-space";
   flexDiv.className = "rm-topbar__spacer-sm";
-  nextIconButton.insertAdjacentElement("afterend", flexDiv);
+  flexDiv.id = nameToUse + "-flex-space";
+
+  var flexDivAfter = document.createElement("div");
+  flexDivAfter.className = "rm-topbar__spacer-sm";
+  flexDivAfter.id = nameToUse + "-flex-space-after";
+  
   nextIconButton.insertAdjacentElement("afterend", mainButton);
-  mainButton.insertAdjacentElement("afterend", flexDiv);
+  mainButton.insertAdjacentElement("beforebegin", flexDiv);
+  mainButton.insertAdjacentElement("afterend", flexDivAfter);
   mainButton.addEventListener("click", toggleDarkMode);
 }
