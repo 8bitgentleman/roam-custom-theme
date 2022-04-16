@@ -15,6 +15,8 @@
   - [bulletpath.js](#bulletpath)
   - [alias-selection.js](#alias)
   - [htmlTableToRoam.js](#table)
+  - [textBulletToRoam.js](#bullet)
+  - [copyBlockURL.js](#copyBlock)
 
 - [Authors](#authors)
 
@@ -43,7 +45,10 @@ To install a plugin copy the code (contents of the JS file) into a roam javascri
 - ### htmlTableToRoam.js <a name = "table"></a>
     Right-Click menu plugin: Converts an HTML table copied to the clipboard into a Roam Table format. To use select the table text from a webpage ([this table](https://www.w3schools.com/html/html_tables.asp) used for testing) then in roam select the plugin from the right click block menu.
 
-- ### copyBlockURL.js <a name = "table"></a>
+- ### textBulletToRoam.js <a name = "bullet"></a>
+    Right-Click menu plugin: Converts a text bullet list  copied to the clipboard into a Roam bullet format. To use select the text bullet list text from an email (or a webpage) then in roam select the plugin from the right click block menu.
+
+- ### copyBlockURL.js <a name = "copyBlock"></a>
     Right-Click menu plugin: Copies the external URL for a specific block to your clipboard
 
 ## ⛏️ Built Using <a name = "built_using"></a>
